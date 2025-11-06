@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wairimu Max Murage | Portfolio</title>
-
-  <!-- CSS: relative to this file (index.html) -->
-  <link rel="stylesheet" href="./public/style.css" />
+  <!-- ✅ Corrected path -->
+  <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
 
@@ -15,10 +14,10 @@
 
   <!-- Header / Hero -->
   <header id="home">
-    <img src="./public/assets/profile.jpg" alt="Wairimu Max Murage" class="profile-photo" />
+    <img src="public/assets/profile.jpg" alt="Wairimu Max Murage" class="profile-photo">
     <h1>Wairimu Max Murage</h1>
     <p>IT Student | Software Developer | Networking Enthusiast</p>
-    <p class="tagline">"Passionate about innovative technology solutions and problem-solving."</p>
+    <p>"Passionate about innovative technology solutions and problem-solving."</p>
     <a href="#projects" class="btn">View Projects</a>
   </header>
 
@@ -38,25 +37,21 @@
     <h2>Resume / About Me</h2>
     <div class="resume-content">
       <p><strong>Profile:</strong> Third-year BSc IT student at JKUAT, strong foundation in IT principles and hands-on experience in computer systems. Adaptable, quick learner, team player, and passionate about problem-solving.</p>
-
       <h3>Education</h3>
       <ul>
         <li>JKUAT – BSc IT (2022–Present, Expected 2026)</li>
         <li>Kanjuri High School – KCSE B+ (2018–2021)</li>
         <li>Nyamachaki Primary School – KCPE 327 (2010–2018)</li>
       </ul>
-
       <h3>Experience</h3>
       <ul>
         <li>Huawei ICT Academy (May–Aug 2024) – Networking fundamentals, cloud computing, Huawei Certification</li>
         <li>Academic Writing (Jan 2023–Present) – Research and structured papers</li>
         <li>Software Development (Mar 2023–Present) – Java, Python, Web development, collaborative projects</li>
       </ul>
-
       <h3>Skills</h3>
       <p><strong>Technical:</strong> HTML, CSS, PHP, JavaScript, Java, Python, Networking, Cloud</p>
       <p><strong>Soft:</strong> Teamwork, Time Management, Problem-Solving, Critical Thinking, Communication</p>
-
       <h3>Certifications</h3>
       <ul>
         <li>Huawei Networking Technologies Certification</li>
@@ -80,10 +75,10 @@
       <div class="project" data-category="laravel">
         <h3 class="project-title">Hospital System</h3>
         <button class="toggle-btn">Show Details</button>
-        <div class="project-content" style="display:none;">
+        <div class="project-content">
           <p><strong>Description:</strong> Hospital management system for patient registration, doctor management, and appointment tracking.</p>
           <p><strong>Technologies:</strong> Laravel, PHP, MySQL, JavaScript, HTML, CSS</p>
-          <img src="./public/assets/hospital.jpg" alt="Hospital System Screenshot" class="project-img" />
+          <img src="public/assets/hospital.jpg" alt="Hospital System Screenshot" class="project-img">
           <ul>
             <li>Doctor & patient registration</li>
             <li>Dynamic appointment scheduling</li>
@@ -98,10 +93,10 @@
       <div class="project" data-category="laravel">
         <h3 class="project-title">Cancer Marathon</h3>
         <button class="toggle-btn">Show Details</button>
-        <div class="project-content" style="display:none;">
+        <div class="project-content">
           <p><strong>Description:</strong> Web platform for managing cancer awareness marathons, including participant registration, event tracking, and donation collection.</p>
           <p><strong>Technologies:</strong> Laravel, PHP, MySQL, JavaScript, HTML, CSS</p>
-          <img src="./public/assets/marathon.jpg" alt="Cancer Marathon Screenshot" class="project-img" />
+          <img src="public/assets/marathon.jpg" alt="Cancer Marathon Screenshot" class="project-img">
           <ul>
             <li>Participant registration and management</li>
             <li>Event scheduling and tracking</li>
@@ -115,10 +110,10 @@
       <div class="project" data-category="web">
         <h3 class="project-title">Weather App</h3>
         <button class="toggle-btn">Show Details</button>
-        <div class="project-content" style="display:none;">
+        <div class="project-content">
           <p><strong>Description:</strong> Web application providing real-time weather information using public APIs.</p>
           <p><strong>Technologies:</strong> HTML, CSS, JavaScript, OpenWeather API</p>
-          <img src="./public/assets/weather.jpg" alt="Weather App Screenshot" class="project-img" />
+          <img src="public/assets/weather.jpg" alt="Weather App Screenshot" class="project-img">
           <ul>
             <li>Search for city weather</li>
             <li>Displays temperature, humidity, and weather conditions</li>
@@ -138,36 +133,35 @@
     <div class="lab">
       <h3 class="lab-title">Problem 1 - Cybershujaa</h3>
       <button class="toggle-btn">Show Details</button>
-      <div class="lab-content" style="display:none;">
+      <div class="lab-content">
         <p><strong>Problem Statement:</strong> Perform OSINT reconnaissance on a target domain to enumerate public-facing assets, subdomains, employee emails, and exposed code repositories without violating scope.</p>
-        <p><strong>Approach:</strong> Passive information-gathering: certificate transparency, WHOIS, DNS, GitHub search, LinkedIn/X. Compile an asset inventory and document timestamps.</p>
-        <p><strong>Tools Used:</strong> amass/subfinder, crt.sh, theHarvester, whois, GitHub search, spreadsheets.</p>
-        <p><strong>Key Lessons Learned:</strong> Certificate transparency and code host searches reveal forgotten assets; always verify scope and document sources.</p>
+        <p><strong>Approach:</strong> Use passive information-gathering techniques: run subdomain enumeration, search certificate transparency logs, query public WHOIS/DNS, search social networks and Git hosting for leaked secrets, and produce an asset inventory.</p>
+        <p><strong>Tools Used:</strong> whois, dig, crt.sh, subfinder/amass, theHarvester, Google dorking, LinkedIn/X searches, GitHub search.</p>
+        <p><strong>Key Lessons Learned:</strong> Passive OSINT yields many exposed assets; certificate transparency and Git search are high-value.</p>
       </div>
     </div>
 
     <div class="lab">
       <h3 class="lab-title">Problem 2 - Cybershujaa</h3>
       <button class="toggle-btn">Show Details</button>
-      <div class="lab-content" style="display:none;">
-        <p><strong>Problem Statement:</strong> Scan and enumerate a lab network to identify live hosts and open services.</p>
-        <p><strong>Approach:</strong> ICMP/TCP discovery, port scans, version detection, CVE correlation and triage.</p>
-        <p><strong>Tools Used:</strong> nmap, masscan, NSE scripts, Vulners.</p>
-        <p><strong>Key Lessons Learned:</strong> Accurate versioning speeds exploitation planning; coordinate noisy scans with stakeholders.</p>
+      <div class="lab-content">
+        <p><strong>Problem Statement:</strong> Scan and enumerate a lab network to identify live hosts, open services and versions, then prioritize likely vulnerable targets.</p>
+        <p><strong>Approach:</strong> Perform ICMP/TCP discovery to find live hosts, run port scans, detect versions, and correlate results with known CVEs.</p>
+        <p><strong>Tools Used:</strong> nmap, masscan, nmap scripts, Vulners lookup.</p>
+        <p><strong>Key Lessons Learned:</strong> Version accuracy speeds exploitation planning; automate CVE lookups but manually verify exploitability.</p>
       </div>
     </div>
 
     <div class="lab">
       <h3 class="lab-title">Problem 3 - Cybershujaa</h3>
       <button class="toggle-btn">Show Details</button>
-      <div class="lab-content" style="display:none;">
+      <div class="lab-content">
         <p><strong>Problem Statement:</strong> Identify and exploit a SQL injection vulnerability in a lab web application, extract limited data, and prepare a remediation report.</p>
-        <p><strong>Approach:</strong> Manual testing, intercept with Burp, confirm with sqlmap, extract PoC data only, recommend parameterized queries.</p>
+        <p><strong>Approach:</strong> Manual input testing, intercept requests with Burp, confirm injection, extract safe data, and recommend parameterized queries.</p>
         <p><strong>Tools Used:</strong> Burp Suite, sqlmap, browser DevTools.</p>
-        <p><strong>Key Lessons Learned:</strong> Manual testing is essential; limit extraction and provide clear remediation steps.</p>
+        <p><strong>Key Lessons Learned:</strong> Manual testing gives context automation misses.</p>
       </div>
     </div>
-
   </section>
 
   <!-- Contact Section -->
@@ -185,23 +179,7 @@
     <p>&copy; 2025 Wairimu Max Murage</p>
   </footer>
 
-  <!-- JS: relative to this file -->
-  <script src="./public/main.js"></script>
-
-  <!-- Fallback small inline JS for toggles and back-to-top (works even if main.js fails) -->
-  <script>
-    // Toggle details
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        if (!content) return;
-        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
-      });
-    });
-
-    // Back to top
-    const back = document.getElementById('backToTop');
-    if (back) back.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
+  <!-- ✅ Corrected JS path -->
+  <script src="public/main.js"></script>
 </body>
 </html>
