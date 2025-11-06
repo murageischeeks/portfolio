@@ -17,8 +17,10 @@ const toggleButtons = document.querySelectorAll(".toggle-btn");
 toggleButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     const content = btn.nextElementSibling;
-    content.style.display = content.style.display === "block" ? "none" : "block";
-    btn.textContent = content.style.display === "block" ? "Hide Details" : "Show Details";
+    const isVisible = window.getComputedStyle(content).display !== "none";
+
+    content.style.display = isVisible ? "none" : "block";
+    btn.textContent = isVisible ? "Show Details" : "Hide Details";
   });
 });
 
