@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wairimu Max Murage | Portfolio</title>
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="public/src/style.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 
   <!-- Header / Hero -->
   <header id="home">
-    <img src="assets/profile.jpg" alt="Wairimu Max Murage" class="profile-photo">
+    <img src="public/assets/profile.jpg" alt="Wairimu Max Murage" class="profile-photo">
     <h1>Wairimu Max Murage</h1>
     <p>IT Student | Software Developer | Networking Enthusiast</p>
     <p>"Passionate about innovative technology solutions and problem-solving."</p>
@@ -77,7 +77,7 @@
         <div class="project-content">
           <p><strong>Description:</strong> Hospital management system for patient registration, doctor management, and appointment tracking.</p>
           <p><strong>Technologies:</strong> Laravel, PHP, MySQL, JavaScript, HTML, CSS</p>
-          <img src="assets/hospital.jpg" alt="Hospital System Screenshot" class="project-img">
+          <img src="public/assets/hospital.jpg" alt="Hospital System Screenshot" class="project-img">
           <ul>
             <li>Doctor & patient registration</li>
             <li>Dynamic appointment scheduling</li>
@@ -95,7 +95,7 @@
         <div class="project-content">
           <p><strong>Description:</strong> Web platform for managing cancer awareness marathons, including participant registration, event tracking, and donation collection.</p>
           <p><strong>Technologies:</strong> Laravel, PHP, MySQL, JavaScript, HTML, CSS</p>
-          <img src="assets/marathon.jpg" alt="Cancer Marathon Screenshot" class="project-img">
+          <img src="public/assets/marathon.jpg" alt="Cancer Marathon Screenshot" class="project-img">
           <ul>
             <li>Participant registration and management</li>
             <li>Event scheduling and tracking</li>
@@ -112,7 +112,7 @@
         <div class="project-content">
           <p><strong>Description:</strong> Web application providing real-time weather information using public APIs.</p>
           <p><strong>Technologies:</strong> HTML, CSS, JavaScript, OpenWeather API</p>
-          <img src="assets/weather.jpg" alt="Weather App Screenshot" class="project-img">
+          <img src="public/assets/weather.jpg" alt="Weather App Screenshot" class="project-img">
           <ul>
             <li>Search for city weather</li>
             <li>Displays temperature, humidity, and weather conditions</li>
@@ -136,9 +136,9 @@
       <div class="lab-content">
         <p><strong>Problem Statement:</strong> Perform OSINT reconnaissance on a target domain to enumerate public-facing assets, subdomains, employee emails, and exposed code repositories without violating scope.</p>
         <p><strong>Approach:</strong> Use passive information-gathering techniques: run subdomain enumeration, search certificate transparency logs, query public WHOIS/DNS, search social networks and Git hosting for leaked secrets, and produce an asset inventory. Respect scope and record evidence/notes for each finding.</p>
-        <p><strong>Tools Used:</strong> whois, dig, crt.sh (Certificate Transparency), subfinder/amass (subdomain enumeration), theHarvester, Google dorking, LinkedIn/X searches, GitHub search, and a notes spreadsheet.</p>
-        <p><strong>Screenshots:</strong> Include: subdomain enumeration output (amass/subfinder), crt.sh certificate entries showing subdomain, sample LinkedIn/OSINT result, and a saved CSV of discovered hosts.</p>
-        <p><strong>Key Lessons Learned:</strong> Passive OSINT yields a surprising number of exposed assets; certificate transparency and Git search are high-value. Always validate ownership and stay strictly within an authorized scope. Document sources and timestamps for reproducible reporting.</p>
+        <p><strong>Tools Used:</strong> whois, dig, crt.sh, subfinder, amass, theHarvester, Google dorking, LinkedIn/X, GitHub search.</p>
+        <p><strong>Screenshots:</strong> Subdomain enumeration output, crt.sh entries, sample LinkedIn results, discovered host CSV.</p>
+        <p><strong>Key Lessons Learned:</strong> Passive OSINT can uncover numerous assets. Always validate ownership and stay within scope. Document everything properly.</p>
       </div>
     </div>
 
@@ -147,11 +147,11 @@
       <h3 class="lab-title">Problem 2 - Cybershujaa</h3>
       <button class="toggle-btn">Show Details</button>
       <div class="lab-content">
-        <p><strong>Problem Statement:</strong> Scan and enumerate a lab network to identify live hosts, open services and versions, then prioritize likely vulnerable targets for further testing.</p>
-        <p><strong>Approach:</strong> Perform ICMP/TCP discovery to find live hosts, run port scans on discovered hosts, run service/version detection, and correlate results with known CVEs. Triage targets by criticality (exposed RDP/SMB, outdated web servers, public-facing databases).</p>
-        <p><strong>Tools Used:</strong> nmap (host discovery, -sS, -sV, -O), masscan (fast discovery), nmap scripts (NSE) for additional checks, and Vulners/OSVDB lookup for CVE mapping. Use a local notes file to track CVE IDs and remediation suggestions.</p>
-        <p><strong>Screenshots:</strong> nmap summary of open ports and service versions, NSE script output flagging weak ciphers or outdated software, and a short prioritized target table exported to CSV.</p>
-        <p><strong>Key Lessons Learned:</strong> Accurate versioning speeds exploitation planning; noisy scans (masscan) should be coordinated with stakeholders. Automating CVE lookups saves time but always manually verify exploitability and impact.</p>
+        <p><strong>Problem Statement:</strong> Scan and enumerate a lab network to identify live hosts and open services.</p>
+        <p><strong>Approach:</strong> Use ICMP/TCP discovery to find live hosts, run port scans and version detection, correlate with known CVEs, and document targets.</p>
+        <p><strong>Tools Used:</strong> nmap, masscan, NSE scripts, Vulners plugin, CVE mapping tools.</p>
+        <p><strong>Screenshots:</strong> nmap output, NSE vulnerability scans, prioritized CSV of results.</p>
+        <p><strong>Key Lessons Learned:</strong> Versioning improves targeting; automated CVE lookups help triage but require manual verification.</p>
       </div>
     </div>
 
@@ -160,11 +160,11 @@
       <h3 class="lab-title">Problem 3 - Cybershujaa</h3>
       <button class="toggle-btn">Show Details</button>
       <div class="lab-content">
-        <p><strong>Problem Statement:</strong> Identify and exploit a SQL injection vulnerability in a deliberately vulnerable lab web application, extract limited data, and prepare a concise remediation report.</p>
-        <p><strong>Approach:</strong> Start with manual input testing and error observation, use proxy (Burp) to intercept and manipulate requests, fingerprint input points, confirm injection using time-based and error-based techniques, extract limited columns with safe UNION/boolean queries, and stop after proof-of-concept data to remain within lab rules.</p>
-        <p><strong>Tools Used:</strong> Burp Suite Community (interception, repeater), sqlmap (automated confirmation & controlled extraction with `--risk`/`--level` safe settings), browser DevTools, and a local VM for testing payloads.</p>
-        <p><strong>Screenshots:</strong> Burp request showing the vulnerable parameter, sqlmap output confirming injection and rows extracted, and the PoC request/response demonstrating a successful boolean/time-based test.</p>
-        <p><strong>Key Lessons Learned:</strong> Manual testing reveals context that automation misses (e.g., input filtering). Limit extraction to proof-of-concept and record exact payloads; suggest parameterized queries, ORM protections, and input validation as remediation.</p>
+        <p><strong>Problem Statement:</strong> Identify and exploit a SQL injection vulnerability in a lab web app.</p>
+        <p><strong>Approach:</strong> Test manually, intercept with Burp, confirm injection with sqlmap, extract limited data for proof-of-concept.</p>
+        <p><strong>Tools Used:</strong> Burp Suite, sqlmap, browser DevTools.</p>
+        <p><strong>Screenshots:</strong> Burp intercepted request, sqlmap confirmation, extracted data proof.</p>
+        <p><strong>Key Lessons Learned:</strong> Manual testing complements automation; always limit exploitation and recommend parameterized queries for remediation.</p>
       </div>
     </div>
   </section>
@@ -184,6 +184,6 @@
     <p>&copy; 2025 Wairimu Max Murage</p>
   </footer>
 
-  <script type="module" src="src/main.js"></script>
+  <script type="module" src="public/src/main.js"></script>
 </body>
 </html>
