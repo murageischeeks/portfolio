@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wairimu Max Murage | Portfolio</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <!-- Header / Hero -->
+  <header id="home">
+    <img src="/assets/profile.jpg" alt="Wairimu Max Murage" class="profile-photo">
+    <h1>Wairimu Max Murage</h1>
+    <p>IT Student | Software Developer | Networking Enthusiast</p>
+    <p>"Passionate about innovative technology solutions and problem-solving."</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </header>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#resume" class="nav-link">Resume</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#lab-challenges" class="nav-link">Lab Challenges</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume / About Me</h2>
+    <div class="resume-content">
+      <p><strong>Profile:</strong> Third-year BSc IT student at JKUAT, strong foundation in IT principles and hands-on experience in computer systems. Adaptable, quick learner, team player, and passionate about problem-solving.</p>
+      <h3>Education</h3>
+      <ul>
+        <li>JKUAT – BSc IT (2022–Present, Expected 2026)</li>
+        <li>Kanjuri High School – KCSE B+ (2018–2021)</li>
+        <li>Nyamachaki Primary School – KCPE 327 (2010–2018)</li>
+      </ul>
+      <h3>Experience</h3>
+      <ul>
+        <li>Huawei ICT Academy (May–Aug 2024) – Networking fundamentals, cloud computing, Huawei Certification</li>
+        <li>Academic Writing (Jan 2023–Present) – Research and structured papers</li>
+        <li>Software Development (Mar 2023–Present) – Java, Python, Web development, collaborative projects</li>
+      </ul>
+      <h3>Skills</h3>
+      <p><strong>Technical:</strong> HTML, CSS, PHP, JavaScript, Java, Python, Networking, Cloud</p>
+      <p><strong>Soft:</strong> Teamwork, Time Management, Problem-Solving, Critical Thinking, Communication</p>
+      <h3>Certifications</h3>
+      <ul>
+        <li>Huawei Networking Technologies Certification</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="filter">
+      <button data-filter="all" class="filter-btn active">All</button>
+      <button data-filter="web" class="filter-btn">Web</button>
+      <button data-filter="laravel" class="filter-btn">Laravel</button>
+    </div>
+
+    <div class="project-list">
+
+      <!-- Hospital System -->
+      <div class="project" data-category="laravel">
+        <h3 class="project-title">Hospital System</h3>
+        <button class="toggle-btn">Show Details</button>
+        <div class="project-content">
+          <p><strong>Description:</strong> Hospital management system for patient registration, doctor management, and appointment tracking.</p>
+          <p><strong>Technologies:</strong> Laravel, PHP, MySQL, JavaScript, HTML, CSS</p>
+          <img src="/assets/hospital.jpg" alt="Hospital System Screenshot" class="project-img">
+          <ul>
+            <li>Doctor & patient registration</li>
+            <li>Dynamic appointment scheduling</li>
+            <li>User-friendly dashboards</li>
+            <li>Secure login with role-based access</li>
+          </ul>
+          <p><strong>Lessons Learned:</strong> Laravel backend, database relationships, dynamic UI, authentication, deployment readiness.</p>
+        </div>
+      </div>
+
+      <!-- Cancer Marathon -->
+      <div class="project" data-category="laravel">
+        <h3 class="project-title">Cancer Marathon</h3>
+        <button class="toggle-btn">Show Details</button>
+        <div class="project-content">
+          <p><strong>Description:</strong> Web platform for managing cancer awareness marathons, including participant registration, event tracking, and donation collection.</p>
+          <p><strong>Technologies:</strong> Laravel, PHP, MySQL, JavaScript, HTML, CSS</p>
+          <img src="/assets/marathon.jpg" alt="Cancer Marathon Screenshot" class="project-img">
+          <ul>
+            <li>Participant registration and management</li>
+            <li>Event scheduling and tracking</li>
+            <li>Donation collection system</li>
+          </ul>
+          <p><strong>Lessons Learned:</strong> Laravel event management, database handling, user authentication, UI/UX for web events.</p>
+        </div>
+      </div>
+
+      <!-- Weather App -->
+      <div class="project" data-category="web">
+        <h3 class="project-title">Weather App</h3>
+        <button class="toggle-btn">Show Details</button>
+        <div class="project-content">
+          <p><strong>Description:</strong> Web application providing real-time weather information using public APIs.</p>
+          <p><strong>Technologies:</strong> HTML, CSS, JavaScript, OpenWeather API</p>
+          <img src="/assets/weather.jpg" alt="Weather App Screenshot" class="project-img">
+          <ul>
+            <li>Search for city weather</li>
+            <li>Displays temperature, humidity, and weather conditions</li>
+            <li>Responsive UI</li>
+          </ul>
+          <p><strong>Lessons Learned:</strong> Fetch API data, DOM manipulation, dynamic UI updates, responsive design.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+   <!-- Lab Challenges Section -->
+  <section id="lab-challenges">
+    <h2>Lab Challenges</h2>
+
+    <!-- Problem 1 -->
+    <div class="lab">
+      <h3 class="lab-title">Problem 1 - Cybershujaa</h3>
+      <button class="toggle-btn">Show Details</button>
+      <div class="lab-content">
+        <p><strong>Problem Statement:</strong> Perform OSINT reconnaissance on a target domain to enumerate public-facing assets, subdomains, employee emails, and exposed code repositories without violating scope.</p>
+        <p><strong>Approach:</strong> Use passive information-gathering techniques: run subdomain enumeration, search certificate transparency logs, query public WHOIS/DNS, search social networks and Git hosting for leaked secrets, and produce an asset inventory. Respect scope and record evidence/notes for each finding.</p>
+        <p><strong>Tools Used:</strong> whois, dig, crt.sh (Certificate Transparency), subfinder/amass (subdomain enumeration), theHarvester, Google dorking, LinkedIn/X searches, GitHub search, and a notes spreadsheet.</p>
+        <p><strong>Screenshots:</strong> Include: subdomain enumeration output (amass/subfinder), crt.sh certificate entries showing subdomain, sample LinkedIn/OSINT result, and a saved CSV of discovered hosts.</p>
+        <p><strong>Key Lessons Learned:</strong> Passive OSINT yields a surprising number of exposed assets; certificate transparency and Git search are high-value. Always validate ownership and stay strictly within an authorized scope. Document sources and timestamps for reproducible reporting.</p>
+      </div>
+    </div>
+
+    <!-- Problem 2 -->
+    <div class="lab">
+      <h3 class="lab-title">Problem 2 - Cybershujaa</h3>
+      <button class="toggle-btn">Show Details</button>
+      <div class="lab-content">
+        <p><strong>Problem Statement:</strong> Scan and enumerate a lab network to identify live hosts, open services and versions, then prioritize likely vulnerable targets for further testing.</p>
+        <p><strong>Approach:</strong> Perform ICMP/TCP discovery to find live hosts, run port scans on discovered hosts, run service/version detection, and correlate results with known CVEs. Triage targets by criticality (exposed RDP/SMB, outdated web servers, public-facing databases).</p>
+        <p><strong>Tools Used:</strong> nmap (host discovery, -sS, -sV, -O), masscan (fast discovery), nmap scripts (NSE) for additional checks, and Vulners/OSVDB lookup for CVE mapping. Use a local notes file to track CVE IDs and remediation suggestions.</p>
+        <p><strong>Screenshots:</strong> nmap summary of open ports and service versions, NSE script output flagging weak ciphers or outdated software, and a short prioritized target table exported to CSV.</p>
+        <p><strong>Key Lessons Learned:</strong> Accurate versioning speeds exploitation planning; noisy scans (masscan) should be coordinated with stakeholders. Automating CVE lookups saves time but always manually verify exploitability and impact.</p>
+      </div>
+    </div>
+
+    <!-- Problem 3 -->
+    <div class="lab">
+      <h3 class="lab-title">Problem 3 - Cybershujaa</h3>
+      <button class="toggle-btn">Show Details</button>
+      <div class="lab-content">
+        <p><strong>Problem Statement:</strong> Identify and exploit a SQL injection vulnerability in a deliberately vulnerable lab web application, extract limited data, and prepare a concise remediation report.</p>
+        <p><strong>Approach:</strong> Start with manual input testing and error observation, use proxy (Burp) to intercept and manipulate requests, fingerprint input points, confirm injection using time-based and error-based techniques, extract limited columns with safe UNION/boolean queries, and stop after proof-of-concept data to remain within lab rules.</p>
+        <p><strong>Tools Used:</strong> Burp Suite Community (interception, repeater), sqlmap (automated confirmation & controlled extraction with `--risk`/`--level` safe settings), browser DevTools, and a local VM for testing payloads.</p>
+        <p><strong>Screenshots:</strong> Burp request showing the vulnerable parameter, sqlmap output confirming injection and rows extracted, and the PoC request/response demonstrating a successful boolean/time-based test.</p>
+        <p><strong>Key Lessons Learned:</strong> Manual testing reveals context that automation misses (e.g., input filtering). Limit extraction to proof-of-concept and record exact payloads; suggest parameterized queries, ORM protections, and input validation as remediation.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:wairimumax1@gmail.com">wairimumax1@gmail.com</a></li>
+      <li>Phone: +254703115896</li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/max-murage-a21233383/" target="_blank">LinkedIn</a></li>
+      <li>GitHub: <a href="https://github.com/murageischeeks" target="_blank">GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wairimu Max Murage</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
